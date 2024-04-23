@@ -1,0 +1,15 @@
+[submodule "zsh/colors/nord.git"]
+	path = zsh/colors/nord.git
+	url = https://github.com/nordtheme/dircolors.git
+[submodule "zsh/plugins/zsh-completions.git"]
+	path = zsh/plugins/zsh-completions.git
+	url = https://github.com/zsh-users/zsh-completions.git
+[submodule "zsh/plugins/zsh-syntax-highlighting.git"]
+	path = zsh/plugins/zsh-syntax-highlighting.git
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/prompts/pure.git"]
+	path = zsh/prompts/pure.git
+	url = https://github.com/sindresorhus/pure.git
+[submodule "zsh/prompts/powerlevel10k.git"]
+	path = zsh/prompts/powerlevel10k.git
+	url = https://github.com/romkatv/powerlevel10k.git

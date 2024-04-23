@@ -1,0 +1,29 @@
+#!/usr/bin/env /opt/homebrew/bin/zsh
+
+# inspired by:	https://github.com/Phantas0s/.dotfiles/blob/master/zsh/zshenv
+# see also:	https://thevaluable.dev/zsh-install-configure-mouseless/
+
+###############################
+# EXPORT ENVIRONMENT VARIABLE #
+###############################
+
+export TERM='rxvt-256color'
+export DOTFILES="$HOME/.dotfiles"
+export WORKSPACE="$HOME/workspace"
+export CONFIG_HOME="$HOME/.config"		# Config is mainly symlinks to .dotfiles, so that .dotfile contents can be more descriptively named
+
+# editor
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+# zsh
+export ZDOTDIR="$CONFIG_HOME/zsh"		    # All other zsh config files will be loaded from this directory (.zprofile, .zshrc, etc)
+export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
+export HISTSIZE=10000                   # Maximum events for internal history
+export SAVEHIST=10000                   # Maximum events in history file
+
+# other software
+export VIMCONFIG="$CONFIG_HOME/nvim"    # Neovim config directory
+
+# Man pages
+export MANPAGER='nvim +Man!'
