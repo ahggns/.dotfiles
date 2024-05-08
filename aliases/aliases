@@ -40,4 +40,4 @@ alias subl='/Applications/Sublime\ Text.app/Contents/MacOS/sublime_text'
 # +---------+
 # | VS Code |
 # +---------+
-alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron'
+alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
