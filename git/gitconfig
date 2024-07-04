@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	email = ahiggins8434@gmail.com
+	name = Andrew Higgins
+[alias]
+	l = log --graph --pretty=format:'%C(auto)%h%Creset %C(blue)%an%Creset - %s %Cgreen(%cr)%Creset%C(auto)%d%Creset' --abbrev-commit --date=short

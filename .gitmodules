@@ -13,3 +13,9 @@
 [submodule "zsh/prompts/powerlevel10k.git"]
 	path = zsh/prompts/powerlevel10k.git
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "terminal/vim-plug"]
+	path = terminal/vim-plug
+	url = git@github.com:junegunn/vim-plug.git
+[submodule "nvim/vim-plug"]
+	path = nvim/vim-plug
+	url = git@github.com:junegunn/vim-plug.git

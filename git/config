@@ -1,7 +1,0 @@
-[init]
-	defaultBranch = main
-[user]
-	email = ahiggins8434@gmail.com
-	name = Andrew Higgins
-[alias]
-	l = log --oneline --decorate --all --graph
