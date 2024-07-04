@@ -17,16 +17,16 @@ fi
 source $DOTFILES/zsh/prompts/powerlevel10k.git/powerlevel10k.zsh-theme
 source $DOTFILES/zsh/prompts/p10k-config.zsh
 
-# +-----------------------+
-# | Init Package Managers |
-# +-----------------------+
+# +------------------+
+# | Package Managers |
+# +------------------+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(pyenv init -)"
 
 # +--------+
 # | Colors |
 # +--------+
-eval "$(gdircolors -b $DOTFILES/zsh/colors/nord.dircolors)"
+eval "$(gdircolors -b $DOTFILES/zsh/colors/nord.git/src/dir_colors)"
 
 # +----------------+
 # | Aliases & Path |
