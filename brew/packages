@@ -1,6 +1,9 @@
 coreutils
+git
+jq
 neovim
+openjdk@11
 openjdk@17
+openjdk@21
 pyenv
-vlc
 zsh
