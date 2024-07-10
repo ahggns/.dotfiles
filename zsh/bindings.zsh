@@ -1,3 +1,20 @@
+#!/usr/bin/env zsh
+
+# ctrl+l used for tmux (switch pane)
+bindkey -r '^l'
+bindkey -r '^g'
+bindkey '^g' .clear-screen
+
+bindkey -r '^p'
+bindkey -s '^p' 'fpdf\n'
+
+# bindkey -s '^b' 'go run .\n'
+
+# edit current command line with vim (vim-mode, then CTRL-v)
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd '^v' edit-command-line
+
 # +------------------------------------+
 # | Using terminfo in Application Mode |
 # +------------------------------------+

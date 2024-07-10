@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 bindkey -v; export KEYTIMEOUT=1 # Vi mode
 source "$DOTFILES/zsh/plugins/vim-mode"
 source "$DOTFILES/zsh/plugins/cursor_mode" # Change cursor shape

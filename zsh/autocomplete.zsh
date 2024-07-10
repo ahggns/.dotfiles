@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 
 # TODO(ahiggins): move this section to a completion.zsh file
 # see: https://github.com/Phantas0s/.dotfiles/blob/043751ef2ca2bc9631d983e62d671ff9ace66db8/zsh/completion.zsh#L17

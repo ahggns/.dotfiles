@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # +----+
 # | ls |
@@ -20,7 +20,6 @@ alias rm='rm -iv'
 # +--------+
 # | Neovim |
 # +--------+
-
 alias vim='nvim'
 alias vi='nvim'
 alias svim='sudoedit'

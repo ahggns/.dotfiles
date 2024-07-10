@@ -1,74 +1,21 @@
 #!/usr/bin/env zsh
 
-# +-----------+
-# | PROFILING |
-# +-----------+
 zmodload zsh/zprof # Load zprof module, which provides profiling functions
 
-# +--------+
-# | Prompt |
-# +--------+
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-source $DOTFILES/zsh/prompts/powerlevel10k.git/powerlevel10k.zsh-theme
-source $DOTFILES/zsh/prompts/p10k-config.zsh
+source "$DOTFILES/zsh/prompt.zsh"
 
-# +------------------+
-# | Package Managers |
-# +------------------+
 eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(pyenv init -)"
 
-# +--------+
-# | Colors |
-# +--------+
+source "$DOTFILES/zsh/alias.zsh"
+source "$DOTFILES/zsh/autocomplete.zsh"
+source "$DOTFILES/zsh/bindings.zsh"
+source "$DOTFILES/zsh/vim-mode.zsh"
+source "$DOTFILES/zsh/plugins/zsh-syntax-highlighting.git/zsh-syntax-highlighting.zsh"
+
 eval "$(gdircolors -b $DOTFILES/zsh/colors/nord.git/src/dir_colors)"
 
-# +----------------+
-# | Aliases & Path |
-# +----------------+
-source $DOTFILES/aliases/aliases
+eval "$(pyenv init -)"
 path+=(
     /Applications/Sublime\ Text.app/Contents/SharedSupport/bin
     /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
 )
-
-# +--------------+
-# | Autocomplete |
-# +--------------+
-source $DOTFILES/zsh/autocomplete.zsh
-
-# +---------+
-# | BINDING |
-# +---------+
-
-# ctrl+l used for tmux (switch pane)
-bindkey -r '^l'
-bindkey -r '^g'
-bindkey '^g' .clear-screen
-
-bindkey -r '^p'
-bindkey -s '^p' 'fpdf\n'
-
-# bindkey -s '^b' 'go run .\n'
-
-# edit current command line with vim (vim-mode, then CTRL-v)
-autoload -Uz edit-command-line
-zle -N edit-command-line
-bindkey -M vicmd '^v' edit-command-line
-
-source "$DOTFILES/zsh/bindings.zsh"
-
-# +-----------+
-# | VI KEYMAP |
-# +-----------+
-source "$DOTFILES/zsh/vim-mode.zsh"
-
-# +---------------------+
-# | Syntax Highlighting |
-# +---------------------+
-source $DOTFILES/zsh/plugins/zsh-syntax-highlighting.git/zsh-syntax-highlighting.zsh
