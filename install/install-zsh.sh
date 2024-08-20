@@ -1,5 +1,7 @@
 #!/bin/sh
 
+ZDOTDIR=$CONFIG/zsh
+
 ln -sf $DOTFILES/zsh/zshenv $HOME/.zshenv
 
 mkdir -p $ZDOTDIR

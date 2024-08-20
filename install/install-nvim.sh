@@ -1,5 +1,7 @@
 #!/bin/sh
 
+VIMCONFIG=$CONFIG/nvim
+
 mkdir -p $VIMCONFIG
 ln -sf $DOTFILES/nvim/init.vim $VIMCONFIG/init.vim
 
