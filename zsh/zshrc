@@ -16,7 +16,19 @@ eval "$(gdircolors -b $DOTFILES/zsh/colors/nord.git/src/dir_colors)"
 
 eval "$(pyenv init -)"
 path+=(
+    $HOME/.local/bin
     /Applications/Sublime\ Text.app/Contents/SharedSupport/bin
     /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
     /Applications/Xcode.app/Contents/MacOS/
+    /Applications/IntelliJ\ IDEA\ CE.app/Contents/MacOS/
+    /opt/homebrew/opt/libpq/bin
 )
+
+#display working directory in title bar
+precmd() {
+    echo -ne "\033]0;${PWD##*/}\007"
+}
+
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt SHARE_HISTORY
