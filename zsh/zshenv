@@ -7,7 +7,11 @@
 # EXPORT ENVIRONMENT VARIABLE #
 ###############################
 
-export TERM='rxvt-256color'
+if [ "$(uname)" = "Darwin" ]; then
+    export TERM='rxvt-color'
+else
+    export TERM='xterm'
+fi
 export DOTFILES="$HOME/.dotfiles"
 export WORKSPACE="$HOME/workspace"
 
