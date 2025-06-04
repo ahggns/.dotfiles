@@ -14,4 +14,4 @@ else
     echo "Homebrew already installed at $(which brew)"
 fi
 
-brew install $(cat "$DOTFILES/brew/packages") --quiet
+brew install $(cat "$DOTFILES/brew/leaves") --quiet
