@@ -28,9 +28,6 @@ export VISUAL="nvim"
 
 # zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"		    # All other zsh config files will be loaded from this directory (.zprofile, .zshrc, etc)
-export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
-export HISTSIZE=10000                   # Maximum events for internal history
-export SAVEHIST=10000                   # Maximum events in history file
 
 # other software
 export VIMCONFIG="$XDG_CONFIG_HOME/nvim"    # Neovim config directory

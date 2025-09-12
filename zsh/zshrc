@@ -33,6 +33,18 @@ precmd() {
     echo -ne "\033]0;${PWD##*/}\007"
 }
 
-setopt INC_APPEND_HISTORY
-setopt EXTENDED_HISTORY
-setopt SHARE_HISTORY
+# History configuration
+export HISTSIZE=100000
+export SAVEHIST=100000
+
+# History options
+setopt INC_APPEND_HISTORY   # Immediately append to the history file, not overwriting it
+setopt EXTENDED_HISTORY   # Save timestamp of each command in the history file
+setopt SHARE_HISTORY   # Share history between all sessions
+setopt HIST_IGNORE_DUPS   # Do not record an entry that was just recorded again
+setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a duplicate
+setopt HIST_FIND_NO_DUPS   # Do not display a previously found entry
+setopt HIST_REDUCE_BLANKS   # Remove superfluous blanks before recording entry
+setopt HIST_IGNORE_SPACE   # Do not record an entry starting with a space
+export HIST_SAVE_NO_DUPS   # Do not write duplicate entries in the history file
+setopt HIST_VERIFY   # Show command with history expansion to user before running it
