@@ -46,5 +46,5 @@ setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a dupl
 setopt HIST_FIND_NO_DUPS   # Do not display a previously found entry
 setopt HIST_REDUCE_BLANKS   # Remove superfluous blanks before recording entry
 setopt HIST_IGNORE_SPACE   # Do not record an entry starting with a space
-export HIST_SAVE_NO_DUPS   # Do not write duplicate entries in the history file
+setopt HIST_SAVE_NO_DUPS   # Do not write duplicate entries in the history file
 setopt HIST_VERIFY   # Show command with history expansion to user before running it
