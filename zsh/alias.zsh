@@ -35,11 +35,12 @@ alias lvim='\vim -c "set nowrap|syntax off"'        # fast vim for big files / b
 # | Gradle |
 # +--------+
 # Find and execute gradlew by searching up the directory tree
+# Runs from the project root directory for proper task context
 gw() {
   local dir=$(pwd)
   while [[ "$dir" != "/" ]]; do
     if [[ -f "$dir/gradlew" ]]; then
-      "$dir/gradlew" "$@"
+      (cd "$dir" && "$dir/gradlew" "$@")
       return
     fi
     dir=$(dirname "$dir")
