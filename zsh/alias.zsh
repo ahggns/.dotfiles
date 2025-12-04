@@ -30,3 +30,20 @@ alias nviml='nvim -w $VIMCONFIG/vimlog "$@"'      # log the keystrokes
 alias nvimd='nvim --noplugin -u NONE'             # launch nvim without any plugin or config (nvim debug)
 alias nvimfr='nvim +e /tmp/scratchpad.md -c "set spelllang=fr"'
 alias lvim='\vim -c "set nowrap|syntax off"'        # fast vim for big files / big oneliner
+
+# +--------+
+# | Gradle |
+# +--------+
+# Find and execute gradlew by searching up the directory tree
+gw() {
+  local dir=$(pwd)
+  while [[ "$dir" != "/" ]]; do
+    if [[ -f "$dir/gradlew" ]]; then
+      "$dir/gradlew" "$@"
+      return
+    fi
+    dir=$(dirname "$dir")
+  done
+  echo "gradlew not found in any parent of $dir" >&2
+  return 1
+}
