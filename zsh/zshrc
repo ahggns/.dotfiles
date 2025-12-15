@@ -16,6 +16,10 @@ source "$DOTFILES/zsh/bindings.zsh"
 source "$DOTFILES/zsh/vim-mode.zsh"
 source "$DOTFILES/zsh/plugins/zsh-syntax-highlighting.git/zsh-syntax-highlighting.zsh"
 
+# fzf key bindings (Ctrl-R for reverse history search) and completions
+[ -f "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh" ] && source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
+[ -f "$(brew --prefix)/opt/fzf/shell/completion.zsh" ] && source "$(brew --prefix)/opt/fzf/shell/completion.zsh"
+
 eval "$(gdircolors -b $DOTFILES/zsh/colors/nord.git/src/dir_colors)"
 
 eval "$(pyenv init -)"
