@@ -51,3 +51,5 @@ setopt HIST_REDUCE_BLANKS   # Remove superfluous blanks before recording entry
 setopt HIST_IGNORE_SPACE   # Do not record an entry starting with a space
 setopt HIST_SAVE_NO_DUPS   # Do not write duplicate entries in the history file
 setopt HIST_VERIFY   # Show command with history expansion to user before running it
+
+[ -f "$HOME/.config/zsh/.zshrc_local" ] && source "$HOME/.config/zsh/.zshrc_local"
